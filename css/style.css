@@ -10,6 +10,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -20,6 +21,9 @@ body {
   font-family: "Lato", sans-serif;
   line-height: 1.6;
 }
+
+html, body {width: auto!important; overflow-x: hidden!important} 
+
 
 .l-heading {
   font-size: 2rem;
@@ -64,7 +68,7 @@ a {
   text-decoration: none;
 }
 
-.active {
+.activeLink {
   display: block;
   /* padding-bottom: 0.2rem; */
   /* border-bottom: solid 1.6px #fff; */
@@ -185,7 +189,7 @@ a {
 header {
   margin-top: 4.375rem;
   height: 100vh;
-  background-image: url("../img/1.jpg");
+  background-image: url("../img/3.jpg");
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
   background-repeat: no-repeat;
   background-position: center center;
@@ -218,6 +222,75 @@ header .main-heading a {
 header .main-heading a:hover {
   background: var(--red-color);
   padding: 1rem 4rem;
+}
+
+/* Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 1rem;
+  padding: 6rem 1rem;
+  background-color: var(--whitish-color);
+}
+
+.gallery_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.gallery_img:hover {
+  transform: scale(1.03);
+}
+
+
+
+
+.gallery_item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery_item-2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery_item-3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.gallery_item-4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+
+.gallery_item-5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+
+.gallery_item-6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
 }
 
 /* Sectrion What */
@@ -282,10 +355,12 @@ label {
 }
 
 input[type="number"] {
-  border: none;
+  /* border: none; */
   background: var(--whitish-color);
-  border-bottom: 1px solid var(--brown-color);
+  border: 1px solid var(--brown-color);
+  border-radius: 0.5rem;
   font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 input[type="number"]:focus {
@@ -345,6 +420,7 @@ ul.ingredients li {
 
 .recipe-item {
   margin: 1rem 0;
+  /* width: 100%; */
 }
 
 .recipe-item h2 {
@@ -355,10 +431,32 @@ ul.ingredients li {
   text-align: center;
 }
 
+/* Responsive video */
+.video {
+  height: 30rem;
+  width:100%;
+}
 
+
+.video::after {
+  display: block;
+  content: '';
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 1000px) {
+  .video {
+    height: 20rem;
+  }
+}
 /* Footer */
 footer {
   padding: 1.4rem;
   background-color: var(--brown-color);
   text-align: center;
+  width: 100vw;
 }
