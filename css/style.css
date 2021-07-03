@@ -190,15 +190,19 @@ a {
 header {
   margin-top: 4.375rem;
   height: 100vh;
-  background-image: url("../img/background.jpg");
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+  background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
+
+
+
 .main-heading {
   display: flex;
   flex-direction: column;
@@ -212,7 +216,6 @@ header .main-heading .l-heading {
 }
 
 header .main-heading a {
-  /* background: red; */
   padding: 1rem 4rem;
   border: 3px solid var(--red-color);
   border-radius: 1rem;
@@ -225,53 +228,6 @@ header .main-heading a:hover {
   padding: 1rem 4rem;
 }
 
-/* Gallery */
-#gallery {
-  background-color: var(--whitish-color);
-}
-.container {
-  max-width: 1000px;
-  padding: 6rem 1rem;
-  margin: 0 auto;
-}
-
-.grid {
-  counter-reset: tiles;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  grid-auto-rows: 4rem;
-  grid-gap: 16px;
-  margin: 16px;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  filter: brightness(60%);
-  transition: all 200ms ease-out;
-}
-img:hover {
-  filter: brightness(100%);
-  transform: scale(1.04);
-}
-
-
-.short {
-  grid-row: span 2;
-}
-
-.tall {
-  grid-row: span 3;
-}
-
-.taller {
-  grid-row: span 4;
-}
-
-.tallest {
-  grid-row: span 5;
-}
 
 /* Sectrion What */
 
@@ -287,6 +243,71 @@ section#what {
 div.text-description {
   width: 80%;
   margin: 0 auto;
+}
+
+/* Gallery */
+#gallery {
+  background-color: var(--whitish-color);
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	flex: 1 0 24rem;
+  height: 35rem;
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/* If browser supports grid */
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
 }
 
 
