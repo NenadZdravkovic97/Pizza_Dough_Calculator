@@ -12,21 +12,25 @@
         <nav>
             <ul class="menu">
                 <li class="logo"><a href="#">AmazingPizza</a></li>
+                <!-- <li class="item"><a class="links activeLink" href="#home">Home</a></li> -->
                 <li class="item"><a class="links activeLink" href="#home">Home</a></li>
                 <li class="item"><a class="links" href="#what">What</a></li>
                 <li class="item"><a class="links" href="#gallery">Gallery</a></li>
                 <li class="item"><a class="links" href="#dough-calculator">Dough Calculator</a></li>
                 <li class="item"><a class="links" href="#recipe">Recipe</a></li>
-                <li class="toggle"><span class="bars"></span></li>
+                <li class="toggle"><span id="btnNav" class="bars"></span></li>
             </ul>
         </nav>
-
-        <header id="home">
-            <div class="main-heading">
-                <h1 class="l-heading">Learn How To Make Amazing Pizza</h1>
-                <a href="#what">Click me!</a>
-            </div>
-        </header>
+        
+        <section id="home">
+            <header>
+                <div class="main-heading">
+                    <h1 class="l-heading">Learn How To Make Amazing Pizza</h1>
+                    <a href="#what">Click me!</a>
+                </div>
+            </header>
+        </section>
+        
 
             
         
@@ -70,17 +74,17 @@
                     <form id="calcForm">
                         <div class="form-group">
                             <label for="number">Number of pizzas: </label>
-                            <input type="number" name="number" id="pizzaNum">   
+                            <input type="number" name="number" id="pizzaNum" value="1">   
                         </div>
     
                         <div class="form-group">
                             <label for="weight">Weight of Doughball (g): </label>
-                            <input type="number" name="weight" id="doughballWeight">   
+                            <input type="number" name="weight" id="doughballWeight" value="250">   
                         </div>
     
                         <div class="form-group">
                             <label for="water">Amount of water (%): </label>
-                            <input type="number" name="water" id="waterAmount">   
+                            <input type="number" name="water" id="waterAmount" value="65">   
                         </div>
                         
                         <input type="submit" value="CALCULATE" id="submitBtn">
@@ -90,9 +94,9 @@
                 <div class="output">
                     <h3>Ingredients:</h3>
                     <ul class="ingredients">
-                        <li>Flour: <span id="flour"> 150 g</span></li>
-                        <li>Water: <span id="water"> 89 ml</span></li>
-                        <li>Salt: <span id="salt"> 4.1 g</span></li>
+                        <li>Flour: <span id="flour"> 149 g</span></li>
+                        <li>Water: <span id="water"> 96.9 ml</span></li>
+                        <li>Salt: <span id="salt"> 4.5 g</span></li>
                         <li>Fresh Yeast: <span id="yeast"> 0.3 g</span></li>
                         <li>*If you have <i><b>dry</b></i> yeast use 1/3 of the amount: e.g if recipe asks for 30g of <i><b>fresh</b></i> yeast use 10 grams of <i><b>dry</b></i></li>
                     </ul>

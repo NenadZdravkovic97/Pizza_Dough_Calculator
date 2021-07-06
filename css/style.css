@@ -125,6 +125,7 @@ a {
   position: relative;
   transition: background 0.2s ease-out;
   width: 18px;
+
 }
 
 .bars:before,
@@ -144,6 +145,24 @@ a {
 
 .bars:after {
   top: -5px;
+}
+
+.activeMenu {
+  position: relative;
+  width: 18px;
+}
+
+.activeMenu:before {
+  content: 'x';
+  color: #fff;
+  font-weight: 300;
+  display: inline-block;
+  position: absolute;
+  font-size: 2.3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
 }
 
 /* Tablet menu */
@@ -327,7 +346,7 @@ div.text-description {
   /* align-self: center; */
   /* justify-self: center; */
   background-color: var(--light-greyish-color);
-  box-shadow: 3px 1px 50px 6px #acabab;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   border-radius: 1rem;
   margin: 1rem;
 }

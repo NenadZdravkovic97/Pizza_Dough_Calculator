@@ -6,10 +6,10 @@ let waterAmountInput = document.querySelector('#waterAmount');
 let calcForm = document.querySelector('#calcForm');
 
 // Span elements to fill with calculated data
-let flour = document.querySelector('#flour');
-let water = document.querySelector('#water');
-let salt = document.querySelector('#salt');
-let yeast = document.querySelector('#yeast');
+let flourSpan = document.querySelector('#flour');
+let waterSpan = document.querySelector('#water');
+let saltSpan = document.querySelector('#salt');
+let yeastSpan = document.querySelector('#yeast');
 
 let flourAmount = () => {
     let total = pizzaNumInput.value * ballWeightInput.value;
@@ -42,6 +42,9 @@ calcForm.addEventListener("submit", (e) => {
     let water = waterAmount();
     let salt = saltAmount();
     let yeast = yeastAmount();
-    console.log(`Flour${flour}, water ${water}, salt ${salt}, yeast ${yeast}`);
+    flourSpan.textContent = flour+ ' g';
+    waterSpan.textContent = water+ ' ml';
+    saltSpan.textContent = salt+ ' g';
+    yeastSpan.textContent = yeast+ ' g';
     e.preventDefault();
 });
