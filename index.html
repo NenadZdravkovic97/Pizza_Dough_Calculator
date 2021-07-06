@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>Document</title>
     </head>
     <body>
         <!--Navigation -->
         <nav>
             <ul class="menu">
-                <li class="logo"><a href="#">AmazingPizza</a></li>
-                <!-- <li class="item"><a class="links activeLink" href="#home">Home</a></li> -->
+                <li class="logo"><a href="#" class="logo-item">AmazingPizza</a></li>
                 <li class="item"><a class="links activeLink" href="#home">Home</a></li>
                 <li class="item"><a class="links" href="#what">What</a></li>
                 <li class="item"><a class="links" href="#gallery">Gallery</a></li>
@@ -22,7 +22,7 @@
             </ul>
         </nav>
         
-        <section id="home">
+        <section id="home" data-aos="fade-down">
             <header>
                 <div class="main-heading">
                     <h1 class="l-heading">Learn How To Make Amazing Pizza</h1>
@@ -35,7 +35,7 @@
             
         
         <section id="what">
-            <div class="text-description">
+            <div class="text-description" data-aos="zoom-out">
                 <h1 class="l-heading">What exactly is Neapolitan Pizza?</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus praesentium dolorum ullam totam cum sint reiciendis, voluptatem quo consectetur quas qui magni adipisci pariatur, suscipit voluptates commodi! Officia fugiat quae, provident odit nostrum numquam dolores itaque aperiam asperiores placeat alias vel quo natus officiis minus ipsum modi dolore voluptate, saepe, assumenda mollitia laboriosam? Sapiente cupiditate eveniet enim consequatur quo maiores cumque reiciendis accusamus repellat inventore facilis quas tempore, vitae ut quod expedita doloremque praesentium blanditiis quos. Voluptate nemo quos doloribus explicabo voluptas aut similique voluptatem rem, amet soluta officiis asperiores ab ipsam inventore nobis blanditiis optio deserunt atque alias sed nesciunt commodi expedita! Dolorum, aliquam consectetur debitis aperiam laboriosam ad cum quas delectus. Possimus iusto quis, distinctio ipsum molestiae, maxime perferendis veniam, atque animi sit labore voluptatibus id quae suscipit harum laudantium. A unde asperiores consequatur totam, mollitia temporibus odio natus? Quae rerum optio mollitia, debitis dolorem necessitatibus similique rem placeat reiciendis quidem deleniti qui maxime non totam cupiditate! Voluptates dolore est dolor at sint ullam exercitationem adipisci omnis ut, voluptas quaerat culpa excepturi distinctio? Cumque, porro! Voluptatibus perspiciatis consectetur expedita tempora? Unde eos molestiae amet quod delectus minus similique at, esse tempora officiis hic iure, architecto quo, ipsa quos alias labore provident velit recusandae adipisci quia animi corporis omnis laborum. Facilis porro facere laboriosam placeat illum unde quam quod autem culpa debitis, sapiente vero adipisci quo. Sunt cumque, eos harum consectetur voluptatum voluptatibus consequuntur inventore incidunt architecto neque! Quod dolor, magnam voluptate quisquam numquam aspernatur, debitis adipisci odio suscipit a nisi? Quia corrupti consequuntur repellendus distinctio, cum ipsam sunt! Autem voluptas adipisci veniam? Sequi quod adipisci quae iste eius non mollitia aspernatur? Laboriosam saepe temporibus qui asperiores debitis commodi molestias libero, non sed quo. Eius laudantium repellat enim ullam voluptatum facilis eum omnis rerum recusandae voluptate. Quas, cumque! Animi. Lorem ipsum dolor sit amet co</p>
             </div>
@@ -48,15 +48,15 @@
             
                 <div class="gallery">
             
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-aos="fade-right">
                         <img class="gallery-image" src="img/1.jpg" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
                     </div>
             
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-aos="fade-down">
                         <img class="gallery-image" src="img/2.jpg" alt="sunset behind San Francisco city skyline">
                     </div>
             
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-aos="fade-left">
                         <img class="gallery-image" src="img/3.jpg" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
                     </div>
                 </div>
@@ -70,7 +70,7 @@
             </div>
             <div id="calculator">
             
-                <div class="form">
+                <div class="form" data-aos="flip-left" data-aos-duration="1500">
                     <form id="calcForm">
                         <div class="form-group">
                             <label for="number">Number of pizzas: </label>
@@ -91,7 +91,7 @@
                     </form>
                 </div>
     
-                <div class="output">
+                <div class="output" data-aos="flip-right" data-aos-duration="1500">
                     <h3>Ingredients:</h3>
                     <ul class="ingredients">
                         <li>Flour: <span id="flour"> 149 g</span></li>
@@ -107,7 +107,7 @@
 
 
         <section id="recipe">
-            <div class="recipe-text">
+            <div class="recipe-text"  data-aos="zoom-out">
                 <div class="recipe-item">
                     <h1 class="l-heading">Recipe:</h1>
                 </div>
@@ -146,5 +146,12 @@
 
         <script src="js/app.js"></script>
         <script src="js/calculator.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+            AOS.init({
+                duration: 1400
+            })
+        </script>
     </body>
 </html>

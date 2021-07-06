@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300&display=swap');
 
 :root {
-  --red-color: #b52032;
-  --brown-color: #a66c48;
+  --red-color: #b4000f;
+  --green-color: #597718;
   --whitish-color: #ebedef;
   --dark-greyish-color: #c4c7cf;
   --light-greyish-color: #dbe4e2;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,6 +21,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
+  
   line-height: 1.6;
 }
 
@@ -31,7 +34,7 @@ html, body {width: auto!important; overflow-x: hidden!important}
 
 /* Navigation */
 nav {
-  background: var(--brown-color);
+  background: var(--green-color);
   padding: 5px 20px;
   position: fixed;
   top: 0;
@@ -49,7 +52,9 @@ a {
   /* padding-bottom: 0.4rem; */
 }
 
-
+.logo {
+  font-family: "Bellota", sans-serif;
+}
 
 .item a:after {
   display: block;
@@ -252,6 +257,10 @@ header .main-heading a:hover {
 
 section#what {
   padding: 6rem 0;
+  /* text-align: center; */
+}
+
+#what h1 {
   text-align: center;
 }
 
@@ -370,7 +379,7 @@ label {
 input[type="number"] {
   /* border: none; */
   background: var(--whitish-color);
-  border: 1px solid var(--brown-color);
+  border: 1px solid var(--green-color);
   border-radius: 0.5rem;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -392,7 +401,7 @@ input[type="number"]:focus {
 
 #submitBtn:hover {
   cursor: pointer;
-  background-color: var(--brown-color);
+  background-color: var(--green-color);
 }
 
 /* Output styles */
@@ -470,7 +479,7 @@ ul.ingredients li {
 /* Footer */
 footer {
   padding: 1.4rem;
-  background-color: var(--brown-color);
+  background-color: var(--green-color);
   text-align: center;
   width: 100vw;
 }

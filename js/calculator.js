@@ -42,9 +42,9 @@ calcForm.addEventListener("submit", (e) => {
     let water = waterAmount();
     let salt = saltAmount();
     let yeast = yeastAmount();
-    flourSpan.textContent = flour+ ' g';
-    waterSpan.textContent = water+ ' ml';
-    saltSpan.textContent = salt+ ' g';
-    yeastSpan.textContent = yeast+ ' g';
+    flourSpan.textContent = flour + ' g';
+    waterSpan.textContent = water + ' ml';
+    saltSpan.textContent = salt + ' g';
+    yeastSpan.textContent = yeast + ' g';
     e.preventDefault();
 });
