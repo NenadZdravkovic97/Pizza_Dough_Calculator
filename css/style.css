@@ -21,12 +21,16 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  
+  overflow: hidden;
   line-height: 1.6;
 }
 
 html, body {width: auto!important; overflow-x: hidden!important} 
 
+
+p {
+  font-size: 1.2rem;
+}
 
 .l-heading {
   font-size: 2rem;
@@ -56,6 +60,7 @@ a {
   font-family: "Bellota", sans-serif;
 }
 
+
 .item a:after {
   display: block;
   padding-bottom: 0.2rem;
@@ -76,9 +81,6 @@ a {
 
 .activeLink {
   display: block;
-  /* padding-bottom: 0.2rem; */
-  /* border-bottom: solid 1.6px #fff; */
-  /* border-bottom: solid 1.6px var(--red-color); */
   background: var(--red-color);
   padding: 0.2rem 1rem;
   border-radius: 1rem;
@@ -92,7 +94,7 @@ a {
 
 .logo a,
 .toggle a {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 /* Mobile menu */
