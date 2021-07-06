@@ -112,6 +112,7 @@ a {
   text-align: center;
   order: 3;
   display: none;
+  padding: 0.2rem 1rem;
 }
 
 .item.active {
