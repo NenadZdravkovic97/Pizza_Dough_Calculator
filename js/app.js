@@ -16,6 +16,13 @@ toggleBtn.addEventListener('click', () => {
             spanNav.classList.remove('activeMenu');
         } else {
             item.classList.add('active');
+            item.addEventListener('click', (e) => {
+                items.forEach(item => {
+                    item.classList.remove('active');
+                    spanNav.classList.add('bars');
+                    spanNav.classList.remove('activeMenu');
+                })
+            });
             spanNav.classList.remove('bars');
             spanNav.classList.add('activeMenu');
         }
@@ -32,7 +39,6 @@ window.addEventListener("scroll", () => {
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - sectionHeight / 3) {
             current = section.getAttribute("id");
-            console.log(current);
         }
     });
 
