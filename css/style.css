@@ -122,6 +122,11 @@ a {
   padding: 0.2rem 1rem;
 }
 
+.links {
+  padding: 0.2rem 1rem;
+  display: block;
+}
+
 .item.active {
   display: block;
 }
@@ -220,7 +225,7 @@ a {
 
 header {
   margin-top: 4.375rem;
-  height: 100vh;
+  min-height: 100vh;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
