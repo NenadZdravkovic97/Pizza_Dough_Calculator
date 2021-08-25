@@ -13,6 +13,11 @@
                 <div class="container cont-nav">
                     <h1 class="logo">Logo</h1>
                     <nav class="main-nav">
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
                         <ul class="main-nav-list">
                             <li class="nav-item">
                                 <a class="main-nav-link" href="#">Home</a>
@@ -29,11 +34,6 @@
                                 <a class="main-nav-link" href="#">Recipe</a>
                             </li>
                         </ul>
-                        <div class="hamburger">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
                     </nav>
                 </div>
             </div>
@@ -49,93 +49,137 @@
         </header>
 
         <section class="section-what">
-            <div class="container">
+            <div class="container descritpion-and-gallery">
                 <div class="text-description">
-                    <div class="description">
-                        <h1 class="l-heading">
-                            What exactly is Neapolitan Pizza?
-                        </h1>
-                        <p>
-                            Neapolitan pizza, or pizza Napoletana, is a type of
-                            pizza that originated in Naples, Italy. This style
-                            of pizza is prepared with simple and fresh
-                            ingredients: a basic dough, raw tomatoes, fresh
-                            mozzarella cheese, fresh basil, and olive oil. No
-                            fancy toppings are allowed!
-                        </p>
-                        <p>
-                            One of its defining characteristics is that there is
-                            often more sauce than cheese. This leaves the middle
-                            of the pie wet or soggy and not conducive to being
-                            served by the slice. Because of this, Neapolitan
-                            pizzas are generally pretty small (about 10 to 12
-                            inches), making them closer to the size of a
-                            personal pizza.
-                        </p>
-                        <p>
-                            Neapolitan pizzas are also cooked at very high
-                            temperatures (800 F to 900 F) for no more than 90
-                            seconds.
-                        </p>
+                    <h1 class="l-heading">What exactly is Neapolitan Pizza?</h1>
+                    <p>
+                        Neapolitan pizza, or pizza Napoletana, is a type of
+                        pizza that originated in Naples, Italy. This style of
+                        pizza is prepared with simple and fresh ingredients: a
+                        basic dough, raw tomatoes, fresh mozzarella cheese,
+                        fresh basil, and olive oil. No fancy toppings are
+                        allowed!
+                    </p>
+                    <p>
+                        One of its defining characteristics is that there is
+                        often more sauce than cheese. This leaves the middle of
+                        the pie wet or soggy and not conducive to being served
+                        by the slice. Because of this, Neapolitan pizzas are
+                        generally pretty small (about 10 to 12 inches), making
+                        them closer to the size of a personal pizza.
+                    </p>
+                    <p>
+                        Neapolitan pizzas are also cooked at very high
+                        temperatures (800 F to 900 F) for no more than 90
+                        seconds.
+                    </p>
+                </div>
+
+                <div id="gallery">
+                    <div class="gallery">
+                        <div
+                            class="gallery-item"
+                            data-aos="fade-right"
+                            data-aos-duration="2500"
+                        >
+                            <img
+                                class="gallery-image"
+                                src="img/1.jpg"
+                                alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
+                            />
+                        </div>
+
+                        <div
+                            class="gallery-item"
+                            data-aos="fade-down"
+                            data-aos-duration="2500"
+                        >
+                            <img
+                                class="gallery-image"
+                                src="img/2.jpg"
+                                alt="sunset behind San Francisco city skyline"
+                            />
+                        </div>
+
+                        <div
+                            class="gallery-item"
+                            data-aos="fade-left"
+                            data-aos-duration="2500"
+                        >
+                            <img
+                                class="gallery-image"
+                                src="img/3.jpg"
+                                alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan"
+                            />
+                        </div>
                     </div>
-                    <div class="description">
-                        <h1 class="l-heading">History</h1>
-                        <p>
-                            Pizza as we know it today (dough topped with
-                            tomatoes and cheese) was invented in Naples. Before
-                            the 1700s, flatbreads existed but were never topped
-                            with tomatoes, which is now a defining
-                            characteristic of pizza.
-                        </p>
-                        <p>
-                            Baker Raffaele Esposito, who worked at the Naples
-                            pizzeria “Pietro... e basta così,” is generally
-                            credited with creating Margherita pizza. In 1889,
-                            King Umberto I and Queen Margherita of Savoy visited
-                            Naples. Esposito baked them a pizza named in honor
-                            of the queen whose colors mirrored those of the
-                            Italian flag: red (tomatoes), white (mozzarella),
-                            and green (basil leaves). This is what is now known
-                            as the classic Neapolitan pizza today.
-                        </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-dough-calculator" id="dough-calculator">
+            <div class="container calculator-container">
+                <div class="dough-h">
+                    <h1 class="l-heading">Calculate Ingredients Needed</h1>
+                </div>
+                <div id="calculator" class="form-and-output">
+                    <div class="form">
+                        <form id="calcForm">
+                            <div class="form-group">
+                                <label for="number">Number of pizzas: </label>
+                                <input
+                                    type="number"
+                                    name="number"
+                                    id="pizzaNum"
+                                    value="1"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="weight"
+                                    >Weight of Doughball (g):
+                                </label>
+                                <input
+                                    type="number"
+                                    name="weight"
+                                    id="doughballWeight"
+                                    value="250"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="water">Amount of water (%): </label>
+                                <input
+                                    type="number"
+                                    name="water"
+                                    id="waterAmount"
+                                    value="65"
+                                />
+                            </div>
+
+                            <input
+                                type="submit"
+                                value="CALCULATE"
+                                id="submitBtn"
+                            />
+                        </form>
                     </div>
-                    <div class="description">
-                        <h1 class="l-heading">Authentic Requirements</h1>
-                        <p>
-                            The official requirements of an authentic Neapolitan
-                            pizza begin with the crust. The dough must be made
-                            with highly refined Italian type 0 or 00 wheat
-                            flour, Neapolitan or fresh brewer’s yeast (not dry
-                            yeast), water, and salt. It must be kneaded by hand
-                            or with a low-speed mixer and formed by hand,
-                            without the help of a rolling pin.
-                        </p>
-                        <p>
-                            The dough is topped with raw, pureed San Marzano
-                            tomatoes from Italy. It can use only two types of
-                            mozzarella cheese. One is fior di latte made from
-                            cow’s milk and the other is mozzarella di Bufala,
-                            made from water buffalo milk, typically raised in
-                            the Campania and Lazio marshlands in Italy. Finally,
-                            Neapolitan pizza is topped off with fresh basil and
-                            extra-virgin olive oil. The ingredients must be
-                            all-natural and fresh.
-                        </p>
-                        <p>
-                            The pizza is baked for 60 to 90 seconds (baking time
-                            cannot exceed 90 seconds) in a minimum 800 F stone
-                            oven with a wood fire.
-                        </p>
+
+                    <div class="output">
+                        <h3>Ingredients:</h3>
+                        <ul class="ingredients">
+                            <li>Flour: <span id="flour"> 149 g</span></li>
+                            <li>Water: <span id="water"> 96.9 ml</span></li>
+                            <li>Salt: <span id="salt"> 4.5 g</span></li>
+                            <li>Fresh Yeast: <span id="yeast"> 0.3 g</span></li>
+                            <li>
+                                *If you have <i><b>dry</b></i> yeast use 1/3 of
+                                the amount: e.g if recipe asks for 30g of
+                                <i><b>fresh</b></i> yeast use 10 grams of
+                                <i><b>dry</b></i>
+                            </li>
+                        </ul>
                     </div>
-                    <span
-                        >Text taken from:
-                        <a
-                            style="color: blue"
-                            href="https://www.thespruceeats.com/"
-                            target="_blank"
-                            >https://www.thespruceeats.com/</a
-                        ></span
-                    >
                 </div>
             </div>
         </section>
