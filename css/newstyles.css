@@ -314,10 +314,11 @@ body {
 
 .gallery-item {
     flex: 1 0 12rem;
-    height: 25rem;
+    height: 35rem;
     margin: 1rem;
     box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
     overflow: hidden;
+    border-radius: 14px;
 }
 
 .gallery-image {
@@ -433,4 +434,117 @@ ul.ingredients li {
     input {
         width: 100%;
     }
+}
+
+/* RECIPE */
+.section-recipe {
+    padding: 9.6rem 0;
+}
+
+.steps-grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.step-number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+}
+
+.step-heading {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.step-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.video-text {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.step-img-box {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-img {
+    width: 60%;
+    box-shadow: 0.6rem 0.8rem 0.8rem rgba(0, 0, 0, 0.4);
+    /* z-index: 10; */
+    transition: 250ms ease-in-out;
+}
+
+.step-img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 34em) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step-img-box:nth-child(2) {
+        grid-row: 1;
+    }
+
+    .step-img-box:nth-child(6) {
+        grid-row: 5;
+    }
+    .step-img-box {
+        transform: translateY(2.4rem);
+    }
+
+    .step-img {
+        width: 80%;
+    }
+}
+
+/* VIDEO SECTION */
+
+/* Responsive video */
+.video-tutorial {
+    padding: 9.6rem 0;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER */
+footer {
+    padding: 2rem;
+    background-color: var(--main-green-color);
+    text-align: center;
+    width: 100vw;
+}
+
+footer h3 {
+    font-size: 2.4rem;
 }
