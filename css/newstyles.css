@@ -43,7 +43,7 @@ Medium: 11px
     --main-green-color: #37b24d;
     /* Tints and shades generator for #37b24d */
     /* ?Open color GREEN */
-    --light-green-color: #5fc171;
+    --light-green-color: #4bba5f;
     --light-color: #ebfbee;
 }
 
@@ -69,6 +69,10 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
+}
+
+.lazy-img {
+    filter: blur(20px);
 }
 
 /**************************/
@@ -148,20 +152,38 @@ body {
 
 .main-nav-link:hover,
 .main-nav-link:active {
-    /* color: var(--light-green-color); */
-    color: var(--main-green-color);
+    color: var(--light-green-color);
+    /* color: var(--main-green-color); */
 }
 
 .nav-item a:after {
     display: block;
     padding-bottom: 0.4rem;
     content: '';
-    border-bottom: solid 1.6px var(--main-green-color);
+    /* border-bottom: solid 1.6px var(--main-green-color); */
+    border-bottom: solid 1.6px var(--light-green-color);
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
 
 .nav-item a:hover:after {
+    transform: scaleX(1);
+}
+
+.main-nav-link.activeLink {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-green-color);
+    font-weight: 500;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.main-nav-link.activeLink:after {
+    display: block;
+    padding-bottom: 0.4rem;
+    content: '';
+    border-bottom: solid 1.6px var(--light-green-color);
     transform: scaleX(1);
 }
 
@@ -186,9 +208,9 @@ body {
         top: -100%;
         top: 9.6rem;
         flex-direction: column;
-        background-color: var(--light-color);
+        /* background-color: var(--light-color); */
+        background-color: #212529;
         width: 100%;
-        border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
@@ -199,22 +221,8 @@ body {
         right: 0;
     }
 
-    .main-nav-link:link,
-    .main-nav-link:visited {
-        display: inline-block;
-        text-decoration: none;
-        color: #0b240f;
-        font-weight: 500;
-        font-size: 2rem;
-        transition: all 0.3s;
-    }
-
     .nav-item {
         margin: 1.2rem 0;
-    }
-
-    .nav-item a:after {
-        border-bottom: solid 1.6px #0b240f;
     }
 
     .hamburger {
@@ -246,7 +254,7 @@ body {
 }
 
 .h-span {
-    color: var(--light-green-color);
+    color: var(--main-green-color);
 }
 
 .action-heading {
@@ -266,7 +274,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     color: var(--light-color);
-    border: 1px solid var(--light-green-color);
+    border: 1px solid var(--main-green-color);
     border-radius: 12px;
     transition: background-color 0.3s;
 }
@@ -413,7 +421,7 @@ input[type='number']:focus {
 
 #submitBtn:hover {
     cursor: pointer;
-    background-color: var(--green-color);
+    background-color: var(--light-green-color);
 }
 
 /* Output styles */
@@ -688,9 +696,10 @@ ul.ingredients li {
 
 .video iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
     height: 100%;
 }
 
