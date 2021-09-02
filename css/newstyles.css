@@ -307,8 +307,9 @@ body {
 .text-description p {
     margin: 2.4rem 0;
     font-size: 2.2rem;
-    text-align: center;
-    letter-spacing: 1.4px;
+    /* text-align: center; */
+    letter-spacing: 2.5px;
+    line-height: 1.6;
     color: #333;
 }
 /* GALLERY */
@@ -383,7 +384,7 @@ body {
 .form-group {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
+    margin: 2.5rem 0;
 }
 
 input {
@@ -436,7 +437,7 @@ ul.ingredients {
 }
 
 ul.ingredients li {
-    margin: 0.8rem 0;
+    margin: 2rem 0;
 }
 
 @media all and (max-width: 800px) {
@@ -635,6 +636,11 @@ ul.ingredients li {
     line-height: 1.8;
 }
 
+.steps-span {
+    margin-bottom: 2.5rem;
+    display: block;
+}
+
 .video-text {
     font-size: 2.4rem;
     font-weight: 600;
@@ -713,4 +719,20 @@ footer {
 
 footer h3 {
     font-size: 2.4rem;
+}
+
+/* OVeride */
+
+p {
+    letter-spacing: 2.2px !important;
+    line-height: 1.4 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.5px !important;
 }
