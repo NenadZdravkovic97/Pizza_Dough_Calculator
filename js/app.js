@@ -1,52 +1,86 @@
-// Navbar toggle
-let toggleBtn = document.querySelector('.toggle');
-let items = document.querySelectorAll('.item');
-let spanNav = document.querySelector('#btnNav')
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.main-nav-list');
 
-// navigation links - add active classes DOM
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".links");
+// Sticku nav
+const header = document.querySelector('.header');
+const nav = document.querySelector('.header-nav');
 
-// Navbar toggle
-toggleBtn.addEventListener('click', () => {
-    items.forEach(item => {
-        if (item.classList.contains('active')) {
-            item.classList.remove('active');
-            spanNav.classList.add('bars');
-            spanNav.classList.remove('activeMenu');
-        } else {
-            item.classList.add('active');
-            item.addEventListener('click', (e) => {
-                items.forEach(item => {
-                    item.classList.remove('active');
-                    spanNav.classList.add('bars');
-                    spanNav.classList.remove('activeMenu');
-                })
-            });
-            spanNav.classList.remove('bars');
-            spanNav.classList.add('activeMenu');
-        }
+// Nav active
+const navItems = document.querySelectorAll('.main-nav-link');
+const sections = document.querySelectorAll('.active-section');
+
+// Lazy loading images
+const imgTargets = document.querySelectorAll('img[data-src]');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
 });
 
+// Sticky nav
+const navHeight = nav.offsetHeight;
 
-// Add Active Classes DOM
+const stickyNav = function (entries) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) nav.classList.add('sticky');
+    else nav.classList.remove('sticky');
+};
+const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+});
 
-window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach((section) => {
+headerObserver.observe(header);
+
+window.addEventListener('scroll', () => {
+    let current = null;
+    sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
-            current = section.getAttribute("id");
+        if (pageYOffset >= sectionTop - sectionHeight / 6) {
+            current = section.getAttribute('id');
         }
     });
-
 
     navItems.forEach(item => {
         item.classList.remove('activeLink');
         if (item.href.split('#')[1] == current) {
             item.classList.add('activeLink');
         }
+        if (current == null) {
+            item.classList.remove('activeLink');
+        }
     });
 });
+
+// Lazy loading images
+const loadImg = function (entries, observer) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    // Replace src with data-src
+    entry.target.src = entry.target.dataset.src;
+
+    entry.target.addEventListener('load', function () {
+        entry.target.classList.remove('lazy-img');
+    });
+
+    observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+    root: null,
+    threshold: 0,
+    rootMargin: '200px',
+});
+
+imgTargets.forEach(img => imgObserver.observe(img));

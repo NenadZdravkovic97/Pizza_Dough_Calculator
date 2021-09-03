@@ -1,222 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <link rel="icon" type="image/png" href="img/favicon-16x16.png"/>
-        <title>AmazingPizza</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
-        <!--Navigation -->
-        <nav>
-            <ul class="menu">
-                <li class="logo"><a href="#" class="logo-item">AmazingPizza</a></li>
-                <li class="item"><a class="links activeLink" href="#home">Home</a></li>
-                <li class="item"><a class="links" href="#what">What</a></li>
-                <li class="item"><a class="links" href="#gallery">Gallery</a></li>
-                <li class="item"><a class="links" href="#dough-calculator">Dough Calculator</a></li>
-                <li class="item"><a class="links" href="#recipe">Recipe</a></li>
-                <li class="toggle"><span id="btnNav" class="bars"></span></li>
-            </ul>
-        </nav>
-        
-        <section id="home">
-            <header>
-                <div class="main-heading">
-                    <h1 class="l-heading">Learn How To Make Amazing Pizza</h1>
-                    <a href="#what">Click me!</a>
-                </div>
-            </header>
-        </section>
-        
-
-            
-        
-        <section id="what">
-            <div class="text-description" data-aos="zoom-out">
-                <h1 class="l-heading">What exactly is Neapolitan Pizza?</h1>
-                <p>
-                    Neapolitan pizza, or pizza Napoletana, is a type of pizza that originated in Naples, Italy. This style of pizza is prepared with simple and fresh ingredients: a basic dough, raw tomatoes, fresh mozzarella cheese, fresh basil, and olive oil. No fancy toppings are allowed!
-
-                </p>
-                <br>
-                <p>
-                    One of its defining characteristics is that there is often more sauce than cheese. This leaves the middle of the pie wet or soggy and not conducive to being served by the slice. Because of this, Neapolitan pizzas are generally pretty small (about 10 to 12 inches), making them closer to the size of a personal pizza.
-                </p>
-                <br>
-                <p>
-                    Neapolitan pizzas are also cooked at very high temperatures (800 F to 900 F) for no more than 90 seconds.
-                </p>
-                <br>
-                <h1 class="l-heading">History</h1>
-                <p>
-                    Pizza as we know it today (dough topped with tomatoes and cheese) was invented in Naples. Before the 1700s, flatbreads existed but were never topped with tomatoes, which is now a defining characteristic of pizza.
-                </p>
-                <br>
-                <p>
-                    Baker Raffaele Esposito, who worked at the Naples pizzeria “Pietro... e basta così,” is generally credited with creating Margherita pizza. In 1889, King Umberto I and Queen Margherita of Savoy visited Naples. Esposito baked them a pizza named in honor of the queen whose colors mirrored those of the Italian flag: red (tomatoes), white (mozzarella), and green (basil leaves). This is what is now known as the classic Neapolitan pizza today.
-                </p>
-                <br>
-                <h1 class="l-heading">Authentic Requirements</h1>
-                <p>
-                    The official requirements of an authentic Neapolitan pizza begin with the crust. The dough must be made with highly refined Italian type 0 or 00 wheat flour, Neapolitan or fresh brewer’s yeast (not dry yeast), water, and salt. It must be kneaded by hand or with a low-speed mixer and formed by hand, without the help of a rolling pin.
-                </p>
-                <br>
-                <p>
-                    The dough is topped with raw, pureed San Marzano tomatoes from Italy. It can use only two types of mozzarella cheese. One is fior di latte made from cow’s milk and the other is mozzarella di Bufala, made from water buffalo milk, typically raised in the Campania and Lazio marshlands in Italy. Finally, Neapolitan pizza is topped off with fresh basil and extra-virgin olive oil. The ingredients must be all-natural and fresh.
-                </p>
-                <br>
-                <p>
-                    The pizza is baked for 60 to 90 seconds (baking time cannot exceed 90 seconds) in a minimum 800 F stone oven with a wood fire.
-                </p>
-                <br>
-                <span>Text taken from: <a style="color: blue;" href="https://www.thespruceeats.com/" target="_blank">https://www.thespruceeats.com/</a></span>
-            </div>
-            
-        </section>
-
-        <section id="gallery">
-            <div class="container">
-
-                <h1 class="heading">What you will be making!</h1>
-            
-                <div class="gallery">
-            
-                    <div class="gallery-item" data-aos="fade-right" data-aos-duration="2500">
-                        <img class="gallery-image" src="img/1.jpg" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
-                    </div>
-            
-                    <div class="gallery-item" data-aos="fade-down" data-aos-duration="2500">
-                        <img class="gallery-image" src="img/2.jpg" alt="sunset behind San Francisco city skyline">
-                    </div>
-            
-                    <div class="gallery-item" data-aos="fade-left" data-aos-duration="2500">
-                        <img class="gallery-image" src="img/3.jpg" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
-                    </div>
-                </div>
-            
-            </div>
-        </section>
-
-        <section id="dough-calculator"  data-aos="zoom-in">
-            <div class="dough-h">
-                <h1 class="l-heading">Calculate Ingredients Needed</h1>
-            </div>
-            <div id="calculator">
-            
-                <div class="form">
-                    <form id="calcForm">
-                        <div class="form-group">
-                            <label for="number">Number of pizzas: </label>
-                            <input type="number" name="number" id="pizzaNum" value="1">   
+        <header class="header active-section" id="home">
+            <div class="header-nav">
+                <div class="container cont-nav">
+                    <img src="img/logo.png" alt="" class="logo">
+                    <nav class="main-nav">
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
                         </div>
-    
-                        <div class="form-group">
-                            <label for="weight">Weight of Doughball (g): </label>
-                            <input type="number" name="weight" id="doughballWeight" value="250">   
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="water">Amount of water (%): </label>
-                            <input type="number" name="water" id="waterAmount" value="65">   
-                        </div>
-                        
-                        <input type="submit" value="CALCULATE" id="submitBtn">
-                    </form>
+                        <ul class="main-nav-list">
+                            <li class="nav-item">
+                                <a class="main-nav-link activeLink" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="main-nav-link" href="#what">What</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="main-nav-link" href="#dough-calculator"
+                                    >Dough Calculator</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="main-nav-link" href="#recipe">Recipe</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-    
-                <div class="output">
-                    <h3>Ingredients:</h3>
-                    <ul class="ingredients">
-                        <li>Flour: <span id="flour"> 149 g</span></li>
-                        <li>Water: <span id="water"> 96.9 ml</span></li>
-                        <li>Salt: <span id="salt"> 4.5 g</span></li>
-                        <li>Fresh Yeast: <span id="yeast"> 0.3 g</span></li>
-                        <li>*If you have <i><b>dry</b></i> yeast use 1/3 of the amount: e.g if recipe asks for 30g of <i><b>fresh</b></i> yeast use 10 grams of <i><b>dry</b></i></li>
-                    </ul>
+            </div>
+
+            <div class="action">
+                <h1 class="action-heading">
+                    <span class="h-span">Learn</span> How To
+                    <span class="h-span">Make</span> Amazing
+                    <span class="h-span">Pizza</span>
+                </h1>
+                <a href="#dough-calculator" class="cta-btn">Calculator &darr;</a>
+            </div>
+        </header>
+
+        <section class="section-what active-section" id="what">
+            <div class="container descritpion-and-gallery">
+                <div class="text-description">
+                    <h1 class="l-heading">What exactly is Neapolitan Pizza?</h1>
+                    <p>
+                        Neapolitan pizza, or pizza Napoletana, is a type of
+                        pizza that originated in Naples, Italy. This style of
+                        pizza is prepared with simple and fresh ingredients: a
+                        basic dough, raw tomatoes, fresh mozzarella cheese,
+                        fresh basil, and olive oil. No fancy toppings are
+                        allowed!
+                    </p>
+                    <p>
+                        One of its defining characteristics is that there is
+                        often more sauce than cheese. This leaves the middle of
+                        the pie wet or soggy and not conducive to being served
+                        by the slice. Because of this, Neapolitan pizzas are
+                        generally pretty small (about 10 to 12 inches), making
+                        them closer to the size of a personal pizza.
+                    </p>
+                    <p>
+                        Neapolitan pizzas are also cooked at very high
+                        temperatures (800 F to 900 F) for no more than 90
+                        seconds.
+                    </p>
+                </div>
+
+                <div id="gallery">
+                    <div class="gallery">
+                        <div
+                        data-aos="fade-right"
+                            class="gallery-item"
+                        >
+                            <img
+                                class="gallery-image"
+                                src="img/1.jpg"
+                                alt="Neapolitan pizza"
+                            />
+                        </div>
+
+                        <div
+                        data-aos="fade-down"
+                            class="gallery-item"
+                        >
+                            <img
+                                class="gallery-image"
+                                src="img/2.jpg"
+                                alt="Neapolitan pizza"
+                            />
+                        </div>
+
+                        <div
+                        data-aos="fade-left"
+                            class="gallery-item"
+                        >
+                            <img
+                                class="gallery-image"
+                                src="img/3.jpg"
+                                alt="Neapolitan pizza"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-dough-calculator active-section" id="dough-calculator" >
+            <div class="container calculator-container" data-aos="zoom-in">
+                <div class="dough-h">
+                    <h1 class="l-heading">Calculate Ingredients Needed</h1>
+                </div>
+                <div id="calculator" class="form-and-output">
+                    <div class="form">
+                        <form id="calcForm">
+                            <div class="form-group">
+                                <label for="number">Number of pizzas: </label>
+                                <input
+                                    type="number"
+                                    name="number"
+                                    id="pizzaNum"
+                                    value="1"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="weight"
+                                    >Weight of Doughball (g):
+                                </label>
+                                <input
+                                    type="number"
+                                    name="weight"
+                                    id="doughballWeight"
+                                    value="250"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="water">Amount of water (%): </label>
+                                <input
+                                    type="number"
+                                    name="water"
+                                    id="waterAmount"
+                                    value="65"
+                                />
+                            </div>
+
+                            <input
+                                type="submit"
+                                value="CALCULATE"
+                                id="submitBtn"
+                            />
+                        </form>
+                    </div>
+
+                    <div class="output">
+                        <h3>Ingredients:</h3>
+                        <ul class="ingredients">
+                            <li>Flour: <span id="flour"> 149 g</span></li>
+                            <li>Water: <span id="water"> 96.9 ml</span></li>
+                            <li>Salt: <span id="salt"> 4.5 g</span></li>
+                            <li>Fresh Yeast: <span id="yeast"> 0.3 g</span></li>
+                            <li>
+                                *If you have <i><b>dry</b></i> yeast use 1/3 of
+                                the amount: e.g if recipe asks for 30g of
+                                <i><b>fresh</b></i> yeast use 10 grams of
+                                <i><b>dry</b></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-questions">
+                <h1 class="l-heading">Questions about ingredients</h1>
+                <div class="container">	
                     
+                    <div class="tab-wrap">
+                    
+                        <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+                        <label for="tab1">Flour</label>
+            
+                        <input type="radio" id="tab2" name="tabGroup1" class="tab">
+                        <label for="tab2">Water</label>
+            
+                        <input type="radio" id="tab3" name="tabGroup1" class="tab">
+                        <label for="tab3">Salt</label>
+    
+                        <input type="radio" id="tab4" name="tabGroup1" class="tab">
+                        <label for="tab4">Yeast</label>
+            
+                        <div class="tab__content">
+                            <h3 class="tab-heading">What type of flour to choose?</h3>
+                            <p class="tab-text">It is important to use flour with high protein content because that way the flour can absorb a lot of water, and the more water you use the better the pizza. Typically in Italy they use Tipo 00 flour but it is very hard to find in local stores, good substitute is just a regular bread flour with 12 to 14% protein content.</p>
+                        </div>
+            
+                        <div class="tab__content">
+                            <h3 class="tab-heading">Why such a high hydratation?</h3>
+                            <p class="tab-text">Pizza dough calculator assumes that you are using Tipo 00 flour so in that case you do not need to make any changes. In case of you using different kind of flour try lowering down the water content to about 55% - 60%.</p>
+                        </div>
+            
+                        <div class="tab__content">
+                            <h3 class="tab-heading">To much salt? No!</h3>
+                            <p class="tab-text">Salt adds flavor to the dough, but it also protects the dough against the effects of harmful bacteria and it also strengthens the gluten structure within the dough. Try using sea salt or kosher salt instead of table salt because table salt is highly processed.</p>
+                        </div>
+    
+                        <div class="tab__content">
+                            <h3 class="tab-heading">Why so little yeast?</h3>
+                            <p class="tab-text">We put so little yeast in this dough because it is supposed to have a long fermentation process. That way we can develop more air, dough will be easier to work with and the pizza will also be easier to digest.</p>
+                        </div>
+            
+                    </div>
+            
+                </div>
+        </section>
+
+        
+
+        <section id="recipe" class="section-recipe active-section">
+            <h1 class="l-heading">Recipe</h1>
+            <div class="container steps-grid">
+                <!-- STEP 01 -->
+                <div class="step-text-box" data-aos="fade-right">
+                    <p class="step-number">01</p>
+                    <h3 class="step-heading">Mixing the dough.</h3>
+                    <p class="step-description">
+                        <span class="steps-span">1. Pour in water in a clean bowl and add the salt.</span>
+
+                        <span class="steps-span"> 2. Mix it well because you need to disolve the salt
+                            completely.</span>
+
+                        <span class="steps-span">  3.Add 10% flour to the water and mix it through with
+                            your hands until the flour dissolves. This will result
+                            in a crepe/pancake consistency.</span>
+
+                        <span class="steps-span"> 4. Next, add the yeast to the mix.</span>
+
+                        <span class="steps-span"> 5. Mix in the rest of the flour.</span>
+
+                        <span class="steps-span"> 6. Knead the dough for 10 to 15 minutes.</span>
+                    </p>
+                </div>
+                <div class="step-img-box"  data-aos="fade-left">
+                    <img src="img/step1-lazy.jpg" data-src="img/step1.jpg" class="step-img lazy-img" alt="Person kneeding the dough" />
+                </div>
+
+                <!-- STEP 02 -->
+                <div class="step-img-box"  data-aos="fade-right">
+                    <img src="img/step2-lazy.jpg" data-src="img/step2.jpg" class="step-img lazy-img" alt="Neapolitan doughballs" />
+                </div>
+                <div class="step-text-box"  data-aos="fade-left">
+                    <p class="step-number">02</p>
+                    <h3 class="step-heading">Fermenting the dough</h3>
+                    <p class="step-description">
+                        <span class="steps-span">7. Form the doughball and cover it with a damp towel and
+                        let it rest for 2hr.</span>
+
+                        <span class="steps-span"> 8. Once 2hr have passed, it is tame to make your dough
+                        balls. Cut the piece of dough and make sure that they
+                        are all the same weight.</span>
+
+                        <span class="steps-span">9. Place the dough balls in a flat surface air tight
+                        container and ferment them from 6 to 8 hr on room
+                        temperature, or 24hr on 16°C - 18°C.</span>
+                    </p>
+                </div>
+
+                <!-- STEP 03 -->
+                <div class="step-text-box"  data-aos="fade-right">
+                    <p class="step-number">03</p>
+                    <h3 class="step-heading">Make pizzas!</h3>
+                    <p class="step-description">
+                        <span class="steps-span"> 10. The dough balls are ready and you can make pizza
+                        now!</span>
+                        
+                        <span class="steps-span">11. Preheat the oven on the highest temperature</span>
+                        
+                        <span class="steps-span">12. Stretch the dough and put your on toppings</span>
+                        
+                        <span class="steps-span">13. If you are making pizza in the regular oven, bake
+                        the crust with sauce for 4 minutes and then add cheese
+                        and other toppings and bake for 2 more minutes, or until
+                        the cheese is melted</span>
+                        
+                        
+                        <span class="video-text"
+                            >You can also follow the detalied video recipe down
+                            bellow</span
+                        >
+                    </p>
+                </div>
+
+                <div class="step-img-box"  data-aos="fade-left">
+                    <img src="img/step3-lazy.jpg" data-src="img/step3.jpg" class="step-img lazy-img" alt="Neapolitan pizza" />
                 </div>
             </div>
         </section>
 
-
-        <section id="recipe">
-            <div class="recipe-text"  data-aos="zoom-out">
-                <div class="recipe-item">
-                    <h1 class="l-heading">Recipe:</h1>
-                </div>
-
-                <div class="recipe-item">
-                    <p>
-                        1. Pour in water in a clean bowl and add the salt.
-                    </p>
-                    <br>
-                    <p>
-                        2. Mix it well because you need to disolve the salt completely.
-                    </p>
-                    <br>
-                    <p>
-                        3.Add 10% flour to the water and mix it through with your hands until the flour dissolves. This will result in a crepe/pancake consistency.
-                    </p>
-                    <br>
-                    <p>
-                        4. Next, add the yeast to the mix.
-                    </p>
-                    <br>
-                    <p>
-                        5. Mix in the rest of the flour.
-                    </p>
-                    <br>
-                    <p>
-                        6. Knead the dough for 10 to 15 minutes.
-                    </p>
-                    <br>
-                    <p>
-                        7. Form the doughball and cover it with a damp towel and let it rest for 2hr.
-                    </p>
-                    <br>
-                    <p>
-                        8. Once 2hr have passed, it is tame to make your dough balls. Cut the piece of dough and make sure that they are all the same weight.
-                    </p>
-                    <br>
-                    <p>
-                        9. Place the dough balls in a flat surface air tight container and ferment them from 6 to 8 hr on room temperature, or 24hr on 16&#176;C - 18&#176;C.
-                    </p>
-                    <br>
-                    <p>
-                        10. The dough balls are ready and you can make pizza now!
-                    </p>
-                </div>
-                <br>
-                <div class="recipe-item">
-                    <h2>Flour: </h2>
-                    <p>It is important to use flour with high protein content because that way the flour can absorb a lot of water, and the more water you use the better the pizza. Typically in Italy they use Tipo 00 flour but it is very hard to find in local stores, good substitute is just a regular bread flour with 12 to 14% protein content.</p>
-                </div>
-
-                <div class="recipe-item">
-                    <h2>Water:</h2>
-                    <p>Pizza dough calculator assumes that you are using Tipo 00 flour so in that case you do not need to make any changes. In case of you using different kind of flour try lowering down the water content to about 55% - 60%.</p>
-                </div>
-
-                <div class="recipe-item">
-                    <h2>Salt: </h2>
-                    <p>Salt adds flavor to the dough, but it also protects the dough against the effects of harmful bacteria and it also strengthens the gluten structure within the dough. Try using sea salt or kosher salt instead of table salt because table salt is highly processed.</p>
-                </div>
-
-                <div class="recipe-item">
-                    <h2>Yeast:</h2>
-                    <p>
-                        We put so little yeast in this dough because it is supposed to have a long fermentation process. That way we can develop more air, dough will be easier to work with and the pizza will also be easier to digest.
-                    </p>
-                </div>
-
-                <div class="recipe-item video">
-                    <h2>This is also a great video recipe for you to follow:</h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8Q_9h6VKm9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+        <section class="video-tutorial" id="video">
+            <h2 class="l-heading">Video recipe</h2>
+            <div class="recipe-item video">
+                <iframe
+                    width="560"
+                    height="349"
+                    src="https://www.youtube.com/embed/8Q_9h6VKm9c"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
             </div>
         </section>
         <footer>
@@ -224,15 +325,13 @@
                 <h3>Copyright &copy; 2021 AmazingPizza All Rights Reserved</h3>
             </div>
         </footer>
-
         <script src="js/app.js"></script>
         <script src="js/calculator.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
-            AOS.init();
             AOS.init({
-                duration: 1400
-            })
+                duration: 2000
+            });
         </script>
     </body>
 </html>
